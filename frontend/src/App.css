@@ -1,36 +1,58 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  width: 80%;
-  height: 80vh;
+  /* padding: 5rem; */
+  width: 85%;
+  height: 90vh;
 }
 
+/* ここから左🔴/ */
 .forGrid {
   border: 2px solid rgb(223, 221, 221);
   display: grid;
   grid-template-columns: 1fr 2fr;
-  height: 100%;
+  height: 80%;
   /* 親の８０にたいしてぴちぴちの１００％ */
-  overflow: hidden;
+  /* overflow: auto; */
+  box-shadow: 0 0 10px 5px #888;
+  background-color: rgb(245, 245, 246);
+  box-shadow: 10px rgba(169, 167, 167, 0.3);
+  /* border-radius: 20px; */
 }
 .leftAll h1 {
   text-align: center;
 }
+
 .searchBarArea {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
+h1 {
+  transform: scaleX(2);
+  font-display: block;
+  font-size: 70px;
+  text-align: center;
+  margin: 10px;
+}
 .leftAll {
   border-right: 2px solid rgb(223, 221, 221);
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  background-color: rgb(7, 141, 236);
+}
+.leftAll h2 {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(227, 241, 248);
+  transform: scaleX(1.4);
 }
 .today {
   background-color: gainsboro;
+  text-align: center;
 }
 
 .allCards {
@@ -46,6 +68,10 @@
   margin: 10px;
 }
 
+.fileName {
+  margin-left: 10px;
+}
+
 .cardTime {
   text-align: right;
   margin: 10px;
@@ -56,20 +82,20 @@
   margin: 10px;
 }
 
-.contentArea {
-  border: 2px solid rgb(223, 221, 221);
-  text-align: left;
-  margin-left: 20px;
-  background-color: aqua;
+/* ここから右🔴/ */
+.rightBodyAll {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
 }
 
 .postPageBody {
-  /* background-color: rgb(236, 237, 236); */
-  display: grid;
-  grid-template-rows: 1fr 5fr;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
   margin: 10px;
-  height: 80%;
+  height: 85%;
 }
 
 .rightHead {
@@ -77,46 +103,39 @@
   justify-content: space-between;
 }
 .rightHead button {
-  background-color: white;
-  margin: 4px;
+  background-color: transparent;
 }
 
-/* .postInput {
-  width: max-content;
-} */
-/*
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-} */
-/*
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-/*
-.card {
-  padding: 2em;
+.saveButton {
+  color: chocolate;
+  /* border-radius: 2px; */
 }
 
-.read-the-docs {
-  color: #888;
-} */
+.inputTitle {
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+textarea {
+  height: 250px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.previewImage {
+  height: 80px;
+  object-fit: contain;
+  /* display: block; */
+}
+
+.bbImage {
+  width: 200px;
+}
+
+.theImage {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

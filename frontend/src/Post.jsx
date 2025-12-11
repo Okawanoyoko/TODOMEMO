@@ -5,13 +5,14 @@ function Post({ setTitle, setContent }) {
     <>
       <div className="postPageBody">
         <input
-          placeholder="input タイトル"
+          class="inputTitle"
+          placeholder="ここにタイトルを入力してください"
           onChange={(e) => {
             setTitle(e.target.value);
           }}
         />
         <textarea
-          placeholder="input コンテント"
+          placeholder="ここにメモ内容を入力してください"
           onChange={(e) => {
             setContent(e.target.value);
           }}

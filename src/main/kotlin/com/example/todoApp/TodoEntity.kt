@@ -30,6 +30,9 @@ class TodoEntity(
     @Column(columnDefinition = "TEXT", nullable = false)
     var content: String = "",
 
+    @Column(nullable = true)
+    var bburl: String? = null,
+
     var time: LocalDateTime = LocalDateTime.now(),
 
 //    var imgURL: URL? = null

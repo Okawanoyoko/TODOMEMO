@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController
 
 
 @RestController
-@CrossOrigin(origins = ["http://localhost:3000"])
+@CrossOrigin(origins = ["http://localhost:5174"])
 class TodoController(@Autowired private val repository: TodoRepository) {
 
     @GetMapping("/")
@@ -35,7 +35,8 @@ class TodoController(@Autowired private val repository: TodoRepository) {
             TodoEntity(
                 filename = req.filename,
                 title = req.title,
-                content = req.content
+                content = req.content,
+                bburl = req.bburl
             )
         )
     }

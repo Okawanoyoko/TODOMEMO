@@ -1,21 +1,23 @@
 import { useState, useEffect } from "react";
 
-function LeftNavi({ setSelected, setShowPost, refresh }) {
-  const [data, setData] = useState([]);
+
+function LeftNavi({ setSelected, setShowPost, refresh, setClickSearchImg, data, setData }) {
+
   const [searchText, setSearchText] = useState("");
   const [search, setSearchMode] = useState(false);
+//   const [clickSearchImg, setClickSearchImg] = useState(false)
 
   //⭐️BODYでSAVEしてrefresh発火のたびに今日のメモをゲット
   useEffect(() => {
     async function getApi() {
-      const response = await fetch("http:localhost:8080/api/getmemo");
-      console.log(response)
+      const response = await fetch("/api/getmemo");
       const json = await response.json();
       setData(json);
     }
     getApi();
   }, [refresh]); //refreshごとに発火
 
+console.log("dataだよ", data)
   //今日の分をフィルター取得
   // const JSTdate = data.map((each) => new Date(each.time));
   // console.log("JST", JSTdate); //Wed Nov 26 2025 18:06:36 GMT+0900 (日本標準時)
@@ -51,8 +53,9 @@ function LeftNavi({ setSelected, setShowPost, refresh }) {
   }
 
   return (
+
     <div className="leftAll">
-      <h1>Write</h1>
+      <h2>Write</h2>
       <div className="searchBarArea">
         <input
           onChange={(e) => setSearchText(e.target.value)}
@@ -68,8 +71,9 @@ function LeftNavi({ setSelected, setShowPost, refresh }) {
         >
           ＋
         </button>
+        <button onClick={() => {setClickSearchImg(true)}}>😃</button>
       </div>
-      <h2 className="today">Today</h2>
+      <h3 className="today">Today</h3>
       {search &&
         searchResult.map((each) => (
           <div key={each.id}>
