@@ -32,5 +32,5 @@ class TodoEntity(
 
     var time: LocalDateTime = LocalDateTime.now(),
 
-    var imgURL: URL? = null
+//    var imgURL: URL? = null
 )

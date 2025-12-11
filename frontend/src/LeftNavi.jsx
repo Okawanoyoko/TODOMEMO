@@ -8,7 +8,7 @@ function LeftNavi({ setSelected, setShowPost, refresh }) {
   //⭐️BODYでSAVEしてrefresh発火のたびに今日のメモをゲット
   useEffect(() => {
     async function getApi() {
-      const response = await fetch("/api/getmemo");
+      const response = await fetch("http:localhost:8080/api/getmemo");
       console.log(response)
       const json = await response.json();
       setData(json);

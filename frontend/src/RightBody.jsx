@@ -22,7 +22,7 @@ function RightBody({ selected, showPost, setSelected, setRefresh, user }) {
   async function save() {
     if (!selected) {
       const filename = prompt("ファイル名を入力してください", "default");
-      await fetch("/api/post", {
+      await fetch("http:localhost:8080/api/post", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
