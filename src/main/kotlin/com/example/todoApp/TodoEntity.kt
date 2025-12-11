@@ -7,6 +7,7 @@ import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 import jakarta.persistence.Table
+import java.net.URL
 import java.time.LocalDateTime
 
 //テーブルを作る
@@ -29,5 +30,7 @@ class TodoEntity(
     @Column(columnDefinition = "TEXT", nullable = false)
     var content: String = "",
 
-    var time: LocalDateTime = LocalDateTime.now()
+    var time: LocalDateTime = LocalDateTime.now(),
+
+    var imgURL: URL? = null
 )
