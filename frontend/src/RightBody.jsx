@@ -28,6 +28,7 @@ function RightBody({ selected, showPost, setSelected, setRefresh, clickSearchImg
 
   async function save() {
     if (!selected) {
+          console.log("送信するbburl:", imgBBURL);
       const filename = prompt("ファイル名を入力してください", "default");
       await fetch("/api/post", {
         method: "POST",
@@ -53,7 +54,7 @@ function RightBody({ selected, showPost, setSelected, setRefresh, clickSearchImg
         id: selected.id,
         title: title,
         content: content,
-        imgURL: imageUrl,
+        imgURL: imgBBURL,
       }),
     });
     setRefresh((current) => current + 1);

@@ -3,6 +3,7 @@ import "./App.css";
 import LeftNavi from "./LeftNavi.jsx";
 import RightBody from "./RightBody.jsx";
 
+
 function App() {
   const [selected, setSelected] = useState(null);
   const [showPost, setShowPost] = useState(false);
@@ -11,7 +12,7 @@ function App() {
  const [data, setData] = useState([]);//左ナビから移動させた前データ１００限定
   return (
     <>
-      <h1>DIG NOTES</h1>
+      <h1 className="Title">DIG NOTES</h1>
       <div className="forGrid">
         <LeftNavi
           setSelected={setSelected} //選択されたものをいれろ

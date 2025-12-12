@@ -1,0 +1,42 @@
+# Name
+todoApp
+
+Spring Boot + React を使ったメモアプリ。画像は ImgBB にアップロードして URL を保存・表示できる。
+
+# DEMO
+- テキストのメモを投稿できる（ファイル名、タイトル、文章、画像）
+- 画像をドラッグ＆ドロップするとプレビューのうえ投稿できる。
+- 保存したメモは一覧表示や編集が可能(ファイル名はNullの場合自動取得し、以降編集は不可)
+- 投稿を一覧（過去２４時間）できる
+- 画像一覧（１００件分予定）から投稿を検索（作成中）できる
+- テキストで投稿を検索
+- 不要な投稿を削除
+
+
+# Features
+- React + Spring Boot
+- ImgBB API を利用した画像アップロード機能
+- あとから検索しやすい作りをめざす
+
+# Requirement
+    "react-dropzone": "^14.3.8",
+    ”Vite-vite”,
+　　”Spring Boot” 3.x
+　　”Jakarta Persistence" (JPA)
+    "ImgBB API Key"  => need account registration : https://api.imgbb.com/
+
+     for MUI/font:
+        "@emotion/styled": "^11.14.1",
+        "@fontsource/roboto": "^5.2.9",
+        "@mui/icons-material": "^7.3.6",
+        "@mui/material": "^7.3.6",
+
+
+
+# Installation
+Spring Boot: ./gradlew bootRun
+React："dev": "vite",
+    　　"build": "vite build",
+
+# Note
+開発環境のみ作成

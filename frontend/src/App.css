@@ -29,13 +29,15 @@
   gap: 10px;
 }
 
-h1 {
-  transform: scaleX(2);
-  font-display: block;
-  font-size: 70px;
+.Title {
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 48px;
+  display: block;
   text-align: center;
   margin: 10px;
 }
+
 .leftAll {
   border-right: 2px solid rgb(223, 221, 221);
   height: 100%;
@@ -138,4 +140,8 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+img {
+object-fit:cover;
 }
